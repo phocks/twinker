@@ -1,0 +1,36 @@
+<head>
+  <title>Twinker</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <!-- <h1>Twinker</h1> -->
+      <!-- {{#unless currentUser}} -->
+        {{> loginButtons}}
+      <!-- {{/unless}} -->
+    </header>
+
+
+    {{> list}}
+ 
+    <!-- <ul>
+      {{#each twinks}}
+        {{> twink}}
+      {{/each}}
+    </ul> -->
+  </div>
+</body>
+
+<!-- <template name="twink">
+  <li>{{text}}</li>
+</template> -->
+
+<template name="list">
+  
+  {{#each userInCollection}}
+    <a href="https://twitter.com/{{services.twitter.screenName}}" target="_blank" title="Link title"><img src="{{services.twitter.profile_image_url_https}}" title="{{profile.name}}"></a>
+  {{/each}}
+
+</template>
